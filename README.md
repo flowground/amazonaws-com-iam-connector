@@ -1,11 +1,11 @@
-# ![LOGO](logo.png) AWS Identity and Access Management MSP Connector
+# ![LOGO](logo.png) AWS Identity and Access Management **flow**ground Connector
 
 ## Description
 
-A generated MSP connector for the AWS Identity and Access Management API (version 2010-05-08).
+A generated **flow**ground connector for the AWS Identity and Access Management API (version 2010-05-08).
 
 Generated from: https://api.apis.guru/v2/specs/amazonaws.com/iam/2010-05-08/swagger.json<br/>
-Generated at: 2019-05-07T11:16:05+03:00
+Generated at: 2019-05-07T17:35:45+03:00
 
 ## API Description
 
@@ -1800,7 +1800,7 @@ Supported authorization schemes:
 
 ## License
 
-flowground :- Telekom iPaaS / amazonaws-com-iam-connector<br/>
+**flow**ground :- Telekom iPaaS / amazonaws-com-iam-connector<br/>
 Copyright © 2019, [Deutsche Telekom AG](https://www.telekom.de)<br/>
 contact: flowground@telekom.de
 
