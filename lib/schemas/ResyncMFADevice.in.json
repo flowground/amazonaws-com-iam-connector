@@ -1,0 +1,80 @@
+{
+    "type": "object",
+    "properties": {
+        "Action": {
+            "required": true,
+            "type": "string"
+        },
+        "Version": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "AuthenticationCode1": {
+                    "description": "<p>An authentication code emitted by the device.</p> <p>The format for this parameter is a sequence of six digits.</p>",
+                    "maxLength": 6,
+                    "minLength": 6,
+                    "pattern": "[\\d]+",
+                    "type": "string"
+                },
+                "AuthenticationCode2": {
+                    "description": "<p>A subsequent authentication code emitted by the device.</p> <p>The format for this parameter is a sequence of six digits.</p>",
+                    "maxLength": 6,
+                    "minLength": 6,
+                    "pattern": "[\\d]+",
+                    "type": "string"
+                },
+                "SerialNumber": {
+                    "description": "<p>Serial number that uniquely identifies the MFA device.</p> <p>This parameter allows (through its <a href=\"http://wikipedia.org/wiki/regex\">regex pattern</a>) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-</p>",
+                    "maxLength": 256,
+                    "minLength": 9,
+                    "pattern": "[\\w+=/:,.@-]+",
+                    "type": "string"
+                },
+                "UserName": {
+                    "description": "<p>The name of the user whose MFA device you want to resynchronize.</p> <p>This parameter allows (through its <a href=\"http://wikipedia.org/wiki/regex\">regex pattern</a>) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-</p>",
+                    "maxLength": 128,
+                    "minLength": 1,
+                    "pattern": "[\\w+=,.@-]+",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "UserName",
+                "SerialNumber",
+                "AuthenticationCode1",
+                "AuthenticationCode2"
+            ],
+            "type": "object"
+        },
+        "X_Amz_Content_Sha256": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Date": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Algorithm": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Credential": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Security_Token": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Signature": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_SignedHeaders": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

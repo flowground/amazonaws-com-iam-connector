@@ -1,0 +1,74 @@
+{
+    "type": "object",
+    "properties": {
+        "Action": {
+            "required": true,
+            "type": "string"
+        },
+        "Version": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "example": {
+                "GroupName": "Test",
+                "NewGroupName": "Test-1"
+            },
+            "properties": {
+                "GroupName": {
+                    "description": "<p>Name of the IAM group to update. If you're changing the name of the group, this is the original name.</p> <p>This parameter allows (through its <a href=\"http://wikipedia.org/wiki/regex\">regex pattern</a>) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-</p>",
+                    "maxLength": 128,
+                    "minLength": 1,
+                    "pattern": "[\\w+=,.@-]+",
+                    "type": "string"
+                },
+                "NewGroupName": {
+                    "description": "<p>New name for the IAM group. Only include this if changing the group's name.</p> <p>This parameter allows (through its <a href=\"http://wikipedia.org/wiki/regex\">regex pattern</a>) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-</p>",
+                    "maxLength": 128,
+                    "minLength": 1,
+                    "pattern": "[\\w+=,.@-]+",
+                    "type": "string"
+                },
+                "NewPath": {
+                    "description": "<p>New path for the IAM group. Only include this if changing the group's path.</p> <p>This parameter allows (through its <a href=\"http://wikipedia.org/wiki/regex\">regex pattern</a>) a string of characters consisting of either a forward slash (/) by itself or a string that must begin and end with forward slashes. In addition, it can contain any ASCII character from the ! (\\u0021) through the DEL character (\\u007F), including most punctuation characters, digits, and upper and lowercased letters.</p>",
+                    "maxLength": 512,
+                    "minLength": 1,
+                    "pattern": "(\\u002F)|(\\u002F[\\u0021-\\u007F]+\\u002F)",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "GroupName"
+            ],
+            "type": "object"
+        },
+        "X_Amz_Content_Sha256": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Date": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Algorithm": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Credential": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Security_Token": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Signature": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_SignedHeaders": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}
